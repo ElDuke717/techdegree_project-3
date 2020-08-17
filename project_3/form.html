@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>The Code Review Sign-Up Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,49 +12,186 @@
 
  <body>
 
-    <header class="banner">
-        
-        <h1>The Code Review</h1>
-
-        <h2 class="signup">Signup for our newsletter</h2>
-        <p>Get the latest news on how your code is doing right in your inbox.</p>
-
-
+    <header>
+        <div class="banner">
+            <h1>The Code Review</h1>
+        </div>
     </header>
 
-    
+    <div class="signup-header">
+        <h2 class="signup">Signup for our newsletter</h2>
+        <p class="latest">Get the latest news on how your code is doing right in your inbox.</p>
+    </div>
 
-        <form action="index.html" method="post">
+        <form action="/my-handling-form-page" method="post">
+            <fieldset class="user_info">
+                <legend class="strong">Contact Information</legend>
+                    
+                            <label for="user_name">Full Name</label>
+                            <input type="text" value= "required" id="name" name="user_name">
+                        
+                            <label for="user_email">Email</label>
+                            <input type="email" value="required" id="email" name="user_email">
+                        
+                            <label for="user_phone">Phone Number</label>
+                            <input type="tel" id="phone" name="user_phone">
+                        
+                            <label for="user_staddress">Street Address</label>
+                            <input type="text" id="st_address" name="user_staddress">
+                        
+                            <label for="user_city">City</label>
+                            <input type="text" id="city" name="user_city">
+                        
+                            <label for="user_state">State</label>
+                            <select id="state" name="user_state">
+                                <option value="---">Choose state</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Maine">Mars</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Virgin Islands">Virgin Islands</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option></select>
+                        
+                            <label for="user_zip">Zip Code</label>
+                            <input type="number" id="zip" name="user_zip">
+                        
+            </fieldset>
 
-            <h2>Contact Information</h2>
+           
 
-                <input type="text" id="name" name="user_name">
-                <input type="email" id="email" name="user_email">
-                <input type="tel" id="phone" name="user_phone">
-                <input type="text" id="st_address" name="user_staddress">
-                <input type="text" id="city" name="user_city">
-                <input type="state" id="state" name="user_state">
-                <input type="number" id="zip" name="user_zip">
+            <fieldset class="type">
+                <legend class="strong">Newsletter</legend>
+                    <p>Select the newsletters you would like to receive</p>
+                    
+                 <!-- Nesting the input within the label allows the label to show up on the right hand side
+                of the checkbox.  This was also done for the checkboxes down below. -->
+                    <label for="HTML_news"><input type="checkbox" id="HTML_news" name="HTML_news">HTML News</label>
 
-            <h2>Newsletter</h2>
-                <p>Select the newsletters you would like to receive</p>
-
-                <input type="radio" id="HTML_news" name="HTML_news">
-                <input type="radio" id="CSS_news" name="CSS_news">
-                <input type="radio" id="JS_news" name="JS_news">
+                    <label for="CSS_news"><input type="checkbox" id="CSS_news" name="CSS_news">CSS News</label>
+                                        
+                    <label for="JS_news"><input type="checkbox" id="JS_news" name="JS_news">Javascript News</label>
+            </fieldset>
             
-            <p>Newsletter format</p>
+            <fieldset class="format">
+                <legend>Newsletter format</legend>
 
-                <input type="radio" id="HTML" name="HTML">
-                <input type="radio" id="plain_text" name="plain_text">
+                    
+                    <label for="HTML"><input type="radio" id="HTML" name="HTML">HTML</label>
+                    
+                    <label for="plain_text"><input type="radio" id="plain_text" name="plain_text">Plain text</label>
+                  
+            </fieldset>
 
-            <p>Other topics that you would like to hear about</p>
+            <fieldset class="other_topics">
+                <p>Other topics that you would like to hear about:</p>
+                    <textarea id="other_ topics" name="other_topics">I'm interested in...
+                    </textarea>
+            </fieldset>
 
-            <textarea id="other_topics" name="other_topics"></textarea>
+            <fieldset class="current_role">
+             
+                <label for="job">What is your current job role?</label>
+                <select id="job" name="user_job">
+                    <optgroup label="Web">
+                        <option value="frontend_developer">Front-End Developer</option>
+                        <option value="php_developer">PHP Developer</option>
+                        <option value="python_developer">Python Developer</option>
+                        <option value="rails_developer">Rails Developer</option>
+                        <option value="web_designer">Web Developer</option>
+                        <option value="wordpress_developer">Wordpress Developer</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option value="android_developer">Android Developer</option>
+                        <option value="ios_developer">iOS Developer</option>
+                        <option value="mobile_designer">Mobile Designer</option>
+                    </optgroup>
+                        <optgroup label="Business">
+                        <option value="business_owner">Business Owner</option>
+                        <option value="frontend_developer">Freelancer</option>
+                    </optgroup>  
+                </select>
 
-            <button type="submit">Sign Up</button>
+            </fieldset>
+
+            <fieldset class="hear_about">
+                <legend>How did you hear about us?</legend>
+                    
+                <div class="check">
+                    <label for="online_forum"><input type="checkbox" id="forum" name="online_forum">
+                    Online Forum</label>
+                </div>
+
+                <div class="check">
+                    <label for="friend"><input type="checkbox" id="friend" name="friend">
+                    Friend or Colleague</label>
+                </div>
+                    
+                    <label for="medium"><input type="checkbox" id="medium_article" name="medium">Medium Article</label>
+                    
+                    <label for="treehouse"><input type="checkbox" id="treehouse" name="treehouse">Treehouse</label><br>
+
+                    <label for="other">Other</label><input type="text" id="other" name="other">
+
+
+                <button type="submit">Sign Up</button>
+
+             </fieldset>
 
         </form>
+
+    <footer>
+        <p class="foot"><em>&copy;2020 The Code Review</em></p>
+    </footer>
    
     
     </body>
