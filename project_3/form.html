@@ -23,25 +23,38 @@
         <p class="latest">Get the latest news on how your code is doing right in your inbox.</p>
     </div>
 
+    <div class="upperdivider"></div>
+        
         <form action="/my-handling-form-page" method="post">
             <fieldset class="user_info">
                 <legend class="strong">Contact Information</legend>
-                    
+                        
+                        <div class="flex-pair">
                             <label for="user_name">Full Name</label>
                             <input type="text" value= "required" id="name" name="user_name">
+                        </div>
                         
+                        <div class="flex-pair">
                             <label for="user_email">Email</label>
                             <input type="email" value="required" id="email" name="user_email">
-                        
+                        </div>
+
+                        <div class="flex-pair">
                             <label for="user_phone">Phone Number</label>
                             <input type="tel" id="phone" name="user_phone">
+                        </div>
                         
+                        <div class="flex-pair">
                             <label for="user_staddress">Street Address</label>
                             <input type="text" id="st_address" name="user_staddress">
-                        
+                        </div>
+
+                        <div class="flex-pair">
                             <label for="user_city">City</label>
                             <input type="text" id="city" name="user_city">
-                        
+                        </div>
+
+                        <div class="flex-pair">
                             <label for="user_state">State</label>
                             <select id="state" name="user_state">
                                 <option value="---">Choose state</option>
@@ -101,13 +114,15 @@
                                 <option value="West Virginia">West Virginia</option>
                                 <option value="Wisconsin">Wisconsin</option>
                                 <option value="Wyoming">Wyoming</option></select>
-                        
+                            </div>
+                        <div class="flex-pair">        
                             <label for="user_zip">Zip Code</label>
                             <input type="number" id="zip" name="user_zip">
+                        </div>
                         
             </fieldset>
 
-           
+            <div class="lowerdivider"></div>
 
             <fieldset class="type">
                 <legend class="strong">Newsletter</legend>
@@ -123,7 +138,7 @@
             </fieldset>
             
             <fieldset class="format">
-                <legend>Newsletter format</legend>
+                <legend class="formatfont">Newsletter format</legend>
 
                     
                     <label for="HTML"><input type="radio" id="HTML" name="HTML">HTML</label>
