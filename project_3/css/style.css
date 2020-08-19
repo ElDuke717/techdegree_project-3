@@ -81,7 +81,7 @@
 }
 
 #user_zip {
-  width: 50%;
+  width: 25%;
 }
 
 select {
@@ -185,22 +185,30 @@ label {
 
   input:hover {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
   textarea:hover {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
   select:hover {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
 
   input:focus {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
+
   textarea:focus {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
+
   select:focus {
     background-color:  #9eadb8ea;
+    transition: 1s ease-in-out;
   }
 
    
@@ -232,10 +240,11 @@ label {
       height: 50px;
       margin: auto 0;
     }
-
+    /* Using the max-width property keeps the zip code input field from
+    stretching too far to the right. */
     #user_zip {
-      width: 35%;
-    }
+      max-width: 25%;
+    }  
 
     #user_state {
       width: 76%;
