@@ -40,7 +40,7 @@
 
                         <div class="flex-pair">
                             <label for="user_phone">Phone Number</label>
-                            <input type="tel" placeholder="+1(111)123-4567" id="user_phone" name="user_phone">
+                            <input type="tel" placeholder="e.g. +1 (111) 123-4567" id="user_phone" name="user_phone">
                         </div>
 
                         <div class="flex-pair">
@@ -116,10 +116,12 @@
                             </div>
                         <div class="flex-pair">
                             <label for="user_zip">Zip Code</label>
-                            <input type="number" id="user_zip" name="user_zip">
+                            <input type="tel" id="user_zip" name="user_zip">
                         </div>
 
             </fieldset>
+
+            <hr>
 
             <fieldset class="type">
                 <legend class="strong">Newsletter</legend>
@@ -146,13 +148,13 @@
 
             <fieldset class="other_topics">
                 <label for="other_topics">Other topics that you would like to hear about:</label>
-                    <textarea id="other_topics" name="other_topics" placeholder="I'm interested in...">
+                    <textarea placeholder="Describe yourself here..." id="other_topics" name="other_topics">
                     </textarea>
             </fieldset>
 
             <fieldset class="current_role">
 
-                <label for="job">What is your current job role?</label>
+                <label for="job">What is your current role?</label>
                 <select id="job" name="user_job">
                     <optgroup label="Web">
                         <option value="frontend_developer">Front-End Developer</option>

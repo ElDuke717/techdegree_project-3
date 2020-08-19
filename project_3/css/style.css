@@ -1,8 +1,6 @@
 /* =================================
   Page Styles
 ==================================== */
-
-
 *  {
     box-sizing: border-box;
   }
@@ -14,10 +12,10 @@
 
   form {
     max-width: 300px;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 10px 20px;
     background: #f4f7f8;
-    border-top: double;
+    border-top: 10px groove rgb(187, 184, 184);
   }
 
  .userinfo {
@@ -47,21 +45,15 @@
     margin: 10px 0 0 5px;
   }
 
-  .type{
-    border-top: 2px black solid;
-  } /*I added a border as part of the fieldset element.
-  This causes the border to intersect with the text,
-  which doesn't match the model but looks pretty good.*/
-
-  .latest {
+   .latest {
     text-align: center;
     padding: 0 10px 20px 10px;
     color: rgb(103, 114, 114)
   }
 
   p {
-    text-align: left;
-    padding: 0 10px 20px 0px;
+    text-align: center;
+    padding: 0 10px 20px 10px;
     color: black;
   }
 
@@ -88,15 +80,48 @@
   margin-bottom: 15px;
 }
 
-.divider {
+#user_zip {
+  width: 50%;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #1C7293;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #1B3B6F;
+  border-radius: 10px;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border:none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 8px;
 }
-
-.inner-divider {
-  border-top: 2px solid black;
-}
-
 /* =================================
   Form Input Styles
 ==================================== */
@@ -107,6 +132,7 @@
   flex-direction: column;
 }
 
+/* Styling for the input fields */
   input[type="text"],
   input[type="email"],
   input[type="number"],
@@ -128,14 +154,33 @@
     margin-bottom: 30px;
   }
 
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 20px 10px 10px;
   }
 
+    #user_state {
+    height: 48px;
+  }
+  
   input {
     margin-right: 10px;
+  }
+
+ /* =================================
+  Pseudo Classes
+==================================== */
+ 
+  /* This right-aligns the placeholder values in the text and e-mail input fields */
+  input[type="text"]::placeholder {
+    text-align: right;
+  }
+  input[type="email"]::placeholder {
+    text-align: right;
+  }
+
+  input[type="tel"]::placeholder {
+    text-align: right;
   }
 
   input:hover {
@@ -148,55 +193,20 @@
     background-color:  #9eadb8ea;
   }
 
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin: 0 4px 8px 0;
+  input:focus {
+    background-color:  #9eadb8ea;
+  }
+  textarea:focus {
+    background-color:  #9eadb8ea;
+  }
+  select:focus {
+    background-color:  #9eadb8ea;
   }
 
-  #user_zip {
-    width: 50%;
-  }
-
-  select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-  }
-
-  button {
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    background-color: #1C7293;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #1B3B6F;
-    border-radius: 10px;
-    border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-    margin-bottom: 10px;
-  }
-
-  fieldset {
-    margin-bottom: 30px;
-    margin-top: 10px;
-    border:none;
-  }
-
-  legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
-
-  label {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-bottom: 8px;
-  }
-
-
+   
+/* =================================
+ Media Queries
+==================================== */
 
   @media(min-width: 768px) {
 
@@ -224,7 +234,11 @@
     }
 
     #user_zip {
-      width: 50%;
+      width: 35%;
+    }
+
+    #user_state {
+      width: 76%;
     }
 
     .flex-pair {
