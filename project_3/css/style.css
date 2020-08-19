@@ -2,7 +2,8 @@
   Page Styles
 ==================================== */
 
-*, *:before, *:after {
+
+*  {
     box-sizing: border-box;
   }
   
@@ -16,10 +17,14 @@
     margin: 20px auto;
     padding: 10px 20px;
     background: #f4f7f8;
-    border-radius: 10px;
+    border-top: double;
   }
   
- 
+ .userinfo {
+  margin-top: 10px;
+  border-top: double;
+ }
+
   .banner {
     font-size: .55em;
     display: flex;
@@ -34,9 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border-bottom: 2mm ridge rgba(64, 68, 73, 0.445); */
-    /* I'm replacing the border above so that I can use a separate <hr> element to 
-    provide the borders with separate styles. */
     margin: 20px 0 0 0px;
     font-size: .75em;
   }
@@ -44,6 +46,12 @@
   .signup {
     margin: 10px 0 0 5px;
   }
+
+  .type{
+    border-top: 2px black solid;
+  } /*I added a border as part of the fieldset element.  
+  This causes the border to intersect with the text, 
+  which doesn't match the model but looks pretty good.*/
 
   .latest {
     text-align: center;
@@ -57,34 +65,46 @@
     color: black;
   }
 
-  .type,
-  .format,
-  .hear_about {
-    display: flex;
-    align-items: column;
-  }
-
 .foot {
   display: flex;
   justify-content: center;
   color: #677272;
 }
 
-.user-info {
-  border-bottom: 2mm ridge rgba(64, 68, 73, 0.445);
-}
-
 .strong {
   font-weight: 600;
 }
 
-  
+.formatfont {
+  font-size: 0.95em;
+}
+
+.user_info label {
+  margin-bottom: 10px;
+}
+
+.user_info input {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+}
+
+.inner-divider {
+  border-top: 2px solid black;
+}
+
 /* ================================= 
   Form Input Styles
 ==================================== */
 
-value {
-  text-align: right;
+.user-info
+.flex-pair {
+  display: flex;
+  flex-direction: column;
 }
 
   input[type="text"],
@@ -108,8 +128,24 @@ value {
     margin-bottom: 30px;
   }
 
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+
   input {
     margin-right: 10px;
+  }
+
+  input:hover {
+    background-color:  #9eadb8ea;
+  }
+  textarea:hover {
+    background-color:  #9eadb8ea;
+  }
+  select:hover {
+    background-color:  #9eadb8ea;
   }
   
   input[type="radio"],
@@ -117,7 +153,7 @@ value {
     margin: 0 4px 8px 0;
   }
   
-  #zip {
+  #user_zip {
     width: 50%;
   }
 
@@ -144,7 +180,8 @@ value {
   
   fieldset {
     margin-bottom: 30px;
-    border: none;
+    margin-top: 10px;
+    border:none;
   } 
   
   legend {
@@ -157,16 +194,37 @@ value {
     flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 8px;
-    /* margin-left: 50px; */
-    /* padding-left: 10px; */
   }
   
     
   
-  @media screen and (min-width: 769px) {
+  @media(min-width: 768px) {
   
     form {
-      max-width: 480px;
+      max-width: 600px;
+    }
+    /* The wider max width allows the labels for phone number and street address
+    to stretch out and not be stacked when at the wider viewport */
+    
+    .user_info .flex-pair {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .user_info input {
+      flex-grow: 1;
+      flex-basis: 75%;
+      width: auto;
+    }
+
+    .user_info label {
+      flex-basis: 25%;
+      height: 50px;
+      margin: auto 0;
+    }
+
+    #user_zip {
+      width: 50%;
     }
   
   }
